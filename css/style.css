@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Start Variable */
+:root {
+
+}
+/* End Variable */
+
+/* Start Components */
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+}
+/* end Components */
+
+/* Start To Do List Section */
+.to-do-list {
+    position: absolute;
+    width: 800px;
+    min-height: 250px;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    padding: 25px;
+    background-color: #FFF;
+    box-shadow: 0 0 10px #CCC inset;
+    min-height: 300px;
+    border-radius: 8px;
+}
+
+.to-do-list .container {
+    width: 100%;
+}
+
+.to-do-list .container .form,
+.to-do-list .container .list {
+    width: 100%;
+    padding: 25px;
+    background: #e1e1e1;
+    border-radius: 8px;
+    position: relative;
+}
+
+.to-do-list .container .list {
+    margin-top: 15px;
+}
+
+.to-do-list .container .form input {
+    width: 100%;
+    border: none;
+    border-radius: 2px;
+    height: 50px;
+    padding-left: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    caret-color: rgba(0, 174, 255, 0.918);
+}
+
+.to-do-list .container .form input:focus,
+.to-do-list .container .form button:focus {
+    outline: none;
+}
+
+.to-do-list .container .form input:focus {
+    box-shadow: 0 0 3px rgba(0, 174, 255, 0.918);
+}
+
+.to-do-list .container .form button {
+    position: absolute;
+    width: 120px;
+    height: 50px;
+    border: none;
+    background-color: rgba(0, 174, 255, 0.918);
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    right: 25px;
+    font-size: 15px;
+    color: #FFF;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.to-do-list .container .form button:hover {
+    background-color: rgb(0, 174, 255);
+}
+
+.to-do-list .container .list .task {
+    width: 100%;
+    min-height: 40px;
+    background-color: #FFF;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: normal;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.to-do-list .container .list .task:not(:last-of-type) {
+    margin-bottom: 15px;
+
+}
+
+.to-do-list .container .list .task .delete {
+    background-color: rgb(167, 0, 0);
+    padding: 5px 30px;
+    color: #FFF;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.to-do-list .container .list .task .delete:hover {
+    background-color: rgb(182, 2, 2);
+}
+
+/* End To Do List Section */
+
+/* Start Media Query */
+@media (max-width: 450px) {
+    .to-do-list {
+        /* padding: 2px; */
+        width: 200px;
+        padding: 25px;
+    }
+    .container {
+        width: 100%;
+    }
+
+    .to-do-list .container .form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .to-do-list .container .form input {
+        height: 40px;
+        font-size: 10px;
+    }
+
+    .to-do-list .container .form button {
+        position: static;
+        margin-top: 5px;
+        width: 100%;
+        height: 35px;
+    }
+
+    .to-do-list .container .list .task {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .to-do-list .container .list .task div {
+        margin-bottom: 5px;
+    }
+
+    .to-do-list .container .list .task .delete {
+        padding: 0;
+    }
+}
+
+@media (min-width: 451px) and (max-width: 575px) {
+    .to-do-list {
+        width: 442px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    
+    .to-do-list {
+        width: 540px;
+    }
+
+    .container {
+        width: 540px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    
+    .to-do-list {
+        width: 700px;
+    }
+    .container {
+        width: 720px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1140px;
+    }
+}
+
+/* End Media Query */
